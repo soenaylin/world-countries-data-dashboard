@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>World Countries Data Dashboard</title>
+		<link
+			rel="stylesheet"
+			href="./css/main.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1>World Countries Data</h1>
+			<h2>Currently, we have 250 countries</h2>
+			<p class="search-info hidden">
+				<i>5 countries satisfied the search criteria</i>
+			</p>
+		</header>
+
+		<section class="controls">
+			<input
+				type="text"
+				placeholder="Search countries by name, capital and languages" />
+
+			<div class="sort-buttons">
+				<button data-sort="name">
+					Name <span class="sort-icon"></span>
+				</button>
+				<button data-sort="capital">
+					Capital <span class="sort-icon"></span>
+				</button>
+				<button data-sort="population">
+					Population <span class="sort-icon"></span>
+				</button>
+				<button class="graph-btn">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="30px"
+						viewBox="0 -960 960 960"
+						width="30px"
+						fill="#f2a93b">
+						<path
+							d="M80-120v-80h800v80H80Zm40-120v-280h120v280H120Zm200 0v-480h120v480H320Zm200 0v-360h120v360H520Zm200 0v-600h120v600H720Z" />
+					</svg>
+				</button>
+			</div>
+		</section>
+
+		<main class="countries">
+			<!-- country cards go here -->
+		</main>
+
+		<section
+			class="graph"
+			id="graph-section">
+			<div class="graph-header">
+				<div class="graph-modes">
+					<button class="active">Population</button>
+					<button>Languages</button>
+				</div>
+
+				<p class="graph-title">World Population</p>
+			</div>
+			<div class="graph-bars">
+				<!-- graph rows go here -->
+			</div>
+		</section>
+
+		<footer class="footer">
+			<p>Developed by <strong>Soe Nay Lin</strong></p>
+			<button
+				id="scroll-top-btn"
+				aria-label="Scroll to top">
+				↑
+			</button>
+		</footer>
+
+		<script src="./data/countries_data.js"></script>
+		<script src="./scripts/main.js"></script>
+	</body>
+</html>

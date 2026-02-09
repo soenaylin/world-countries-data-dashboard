@@ -45,49 +45,52 @@ Each folder has one clear responsibility.
 
 ### Core Concepts
 
-1. State (Single Source of Truth)
-   State = {
-   searchQuery,
-   sortBy,
-   sortOrder,
-   graphView
-   }
+**1. State (Single Source of Truth)**
+
+```js
+State = {
+	searchQuery,
+	sortBy,
+	sortOrder,
+	graphView,
+};
+```
 
 All UI is derived from state
 No hidden mutations
 Predictable rendering
 
-2. Pure Functions (Services & Utils)
-   Located in: services/ utils/
-   These functions:
-   Do not touch the DOM
-   Do not mutate state
-   Return new data
+**2. Pure Functions (Services & Utils)**
+- Located in: services/ utils/
+- These functions:
+- Do not touch the DOM
+- Do not mutate state
+- Return new data
 
 Examples: filterCountries, sortCountries, getPopulationGraphData, debounce, normalizeCountryName
 
-This makes the logic:
-testable
-reusable
-framework-agnostic
+- This makes the logic:
+- testable
+- reusable
+- framework-agnostic
 
-3. UI Layer (DOM Rendering)
-   Located in ui/
-   Responsibilities:
-   Create DOM nodes
-   Render lists and graphs
-   Update visual state (active buttons, labels)
+**3. UI Layer (DOM Rendering)**
+- Located in ui/
+- Responsibilities:
+- Create DOM nodes
+- Render lists and graphs
+- Update visual state (active buttons, labels)
 
 Examples: renderCountries, renderGraph, createCountryCard, updateSortButtons
 
-UI functions never change state
+- UI functions never change state
 
-4. Events Layer (User Interaction)
-   Located in events/
-   Responsibilities:
-   Listen to user actions
-   Update state
-   Trigger a re-render
+**4. Events Layer (User Interaction)**
+- Located in events/
+- Responsibilities:
+- Listen to user actions
+- Update state
+- Trigger a re-render
 
 Example flow:
 User clicks sort button → state updates → renderApp() runs → UI updates

@@ -76,6 +76,7 @@ body {
 	text-transform: uppercase;
 	font-size: 10px;
 	line-height: 16px;
+	transition: all 0.3s;
 	/* display: flex;
 	align-items: center;
 	gap: 6px; */
@@ -99,6 +100,7 @@ body {
 
 .graph-btn:hover svg {
 	transform: scale(1.1);
+	cursor: pointer;
 }
 
 .graph-btn svg {
@@ -231,6 +233,16 @@ body {
 
 .footer {
 	padding: 36px 80px;
+}
+
+.footer p strong a {
+	text-decoration: none;
+	color: #000;
+	transition: color 0.3s ease;
+}
+
+.footer p strong a:hover {
+	color: #f2a93b;
 }
 
 #scroll-top-btn {

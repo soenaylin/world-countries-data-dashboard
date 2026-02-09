@@ -1,5 +1,7 @@
 import { countries } from "./data/countries_data.js";
+
 import { state } from "./state/state.js";
+
 import { filterCountries } from "./services/filterCountries.js";
 import { sortCountries } from "./services/sortCountries.js";
 import { renderCountries } from "./ui/renderCountries.js";
